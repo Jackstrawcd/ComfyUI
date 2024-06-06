@@ -122,6 +122,7 @@ parser.add_argument("--multi-user", action="store_true", help="Enables per-user 
 
 parser.add_argument("--verbose", action="store_true", help="Enables more debug prints.")
 
+parser.add_argument("--worker", action="store_true", help="Start redis worker.", default=False)
 
 if comfy.options.args_parsing:
     args = parser.parse_args()

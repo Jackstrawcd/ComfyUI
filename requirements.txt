@@ -14,3 +14,8 @@ psutil
 #non essential dependencies:
 kornia>=0.7.1
 spandrel
+
+# comfyui worker
+python-redis-lock==4.0.0
+redis
+oss2

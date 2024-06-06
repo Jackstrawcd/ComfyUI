@@ -223,6 +223,10 @@ if __name__ == "__main__":
 
     threading.Thread(target=prompt_worker, daemon=True, args=(q, server,)).start()
 
+    if args.worker:
+        from redis_worker import run_redis_prompt_worker
+        run_redis_prompt_worker(server)
+
     if args.output_directory:
         output_dir = os.path.abspath(args.output_directory)
         logging.info(f"Setting output directory to: {output_dir}")
